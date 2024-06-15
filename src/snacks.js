@@ -1,11 +1,11 @@
 const { nanoid } = require("nanoid");
-const snackPrice = require("../data/snackPrice.json");
+const snackPrice = require("../data/snacks.json");
 
 function create(snacks, snackName) {
     const snack = {
         name: snackName,
-        id: nanoid(3),
-        price: snackPrice.json[snackName]
+        id: nanoid(1),
+        price: snacks.json[snackName]
     };
     snacks.push(snack);
     return snacks;
@@ -34,4 +34,16 @@ function update(snacks, snackId, updatedSnack ) {
     }
 }
 
-module.exports = { create, index, show, update };
+function destroy(snacks, snackId) {
+    const index = snacks.findIndex((snack) => snack.id === snackId);
+    if (index > -1) {
+        snacks.splice(index, 1);
+        console.log("Snack has been removed");
+        return snacks;
+    } else {
+        console.log("Snack not found");
+        return snacks;
+    }
+}
+
+module.exports = { create, index, show, update, destroy };

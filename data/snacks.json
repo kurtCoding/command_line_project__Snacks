@@ -1,1 +1,9 @@
-[]
+[
+    {"name": "Kit Kat", "id": "1", "price": 2},
+    {"name": "Skittles", "id": "2", "price": 2.50},
+    {"name": "Snickers", "id": "3", "price": 2},
+    {"name": "Fruit Snacks", "id": "4", "price": 3.25},
+    {"name": "Popcorn", "id": "5", "price": 3.50},
+    {"name": "Twix", "id": "6", "price": 2},
+    {"name": "Starburst", "id": "7", "price": 2.50}
+]
