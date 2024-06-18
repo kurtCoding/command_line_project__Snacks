@@ -9,10 +9,11 @@ function run() {
     
     const action = process.argv[2];
     const snack = process.argv[3];
+    const price = process.argv[4];
 
     switch (action) {
         case "create":
-            updatedSnack = create(snacks, snack);
+            updatedSnack = create(snacks, snack, price);
             writeToFile = true;
             break;
         case "index":

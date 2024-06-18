@@ -1,11 +1,11 @@
 const { nanoid } = require("nanoid");
 const snackPrice = require("../data/snacks.json");
 
-function create(snacks, snackName) {
+function create(snacks, snackName, price) {
     const snack = {
         name: snackName,
-        id: nanoid(1),
-        price: snacks.json[snackName]
+        id: nanoid(3),
+        price: Number(price)
     };
     snacks.push(snack);
     return snacks;
