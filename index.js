@@ -10,6 +10,7 @@ function run() {
     const action = process.argv[2];
     const snack = process.argv[3];
     const price = process.argv[4];
+    // const inStock = process.argv[5];
 
     switch (action) {
         case "create":
